@@ -1,0 +1,171 @@
+#banner-home {
+  .content-banner {
+    display: inline-block;
+    width: 100%;
+    margin-top: 135px;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    animation: zoomIn 5s ease;
+    -webkit-animation: zoomIn 5s ease;
+  }
+
+}
+
+.box-design {
+  border: solid 2px rgba(255, 255, 255, 0.45);
+  text-align: center;
+  height: 290px;
+  width: 290px;
+  margin: 0 auto 30px;
+  border-radius: 5px;
+  // // opacity: .95;
+  @include box-shadow;
+
+  h1 {
+    font-size: 120px;
+    font-family: arial, serif;
+    text-align: center;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.5);
+    margin: -7px 0px -45px 0px;
+
+    .letter-spacing {
+      text-align: center;
+      padding-left: 17px;
+      letter-spacing: 17px;
+    }
+  }
+  p {
+    font-size: 23px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 300;
+    color: #eecca3;
+    text-transform: uppercase;
+    padding-top: 23px;
+  }
+}
+.page-card {
+  height: calc(100vh - 40px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  z-index: 1;
+}
+.home--vd {
+  z-index: -4;
+  // position: absolute;
+  // background: url(dist/assets/img/home-video.jpg) center center no-repeat #eaeaea;
+  //   background-size: cover;
+  //   opacity: 1;
+
+  video {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    -o-object-fit: cover;
+    object-fit: cover;
+  }
+}
+.home--bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0.9;
+  @include linearGradient(#1d936a, #1f1e2d);
+}
+
+.homenav {
+  position: relative;
+  width: 800px;
+  // height: 400px;
+  padding: 50px 20px 30px;
+  border-radius: 10px;
+  @include linearGradient($white, $softWhite);
+  @include box-shadow;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: .35s cubic-bezier(.77,0,.175,1);
+  @media screen and (max-width: 900px) {
+    width: 80%;
+  }
+  .homenav--header{
+    padding: 0 70px;
+    transition: .35s cubic-bezier(.77,0,.175,1);
+    @media screen and (max-width: 900px) {
+      text-align: center;
+      padding: 0;
+    }
+    h1 {
+      font-size: 70px;
+      font-family: 'Raleway', serif;
+      text-transform: uppercase;
+      // text-align: center;
+      // font-weight: bold;
+      @media only screen and (max-width: 660px) {
+        font-size: 35px;
+      }
+    }
+    h2 {
+      color: $textSoftGrey;
+      font-size: 16px;
+      font-family: 'Raleway', serif;
+      font-weight: 300;
+      // font-style: italic;
+      @media only screen and (max-width: 660px) {
+        font-size: 14px;
+      }
+    }
+    p {
+      color: $textSoftGrey;
+      font-size: 16px;
+      // margin: 10px 0 15px;
+      font-family: 'Raleway', serif;
+    }
+  }
+  .homenav--nav {
+    position: relative;
+    margin-top: 50px;
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid #c3c3c3;
+    transition: .35s cubic-bezier(.77,0,.175,1);
+    @media only screen and (max-width: 660px) {
+      margin-top: 20px;
+    }
+    ul li {
+      width: 184px;
+      float: left;
+      text-align: center;
+      @media screen and (max-width: 900px) {
+        float: none;
+        margin: auto;
+      }
+    }
+    a {
+      font-family: Arial,sans-serif;
+      text-transform: uppercase;
+      font-weight: bold;
+      display: block;
+      font-size: 16px;
+      padding: 20px 0;
+      position: relative;
+      &:hover {
+        color: $salmonPink;
+      }
+      @media only screen and (max-width: 660px) {
+        padding: 10px 0;
+      }
+    }
+  }
+}

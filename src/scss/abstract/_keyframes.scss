@@ -1,0 +1,21 @@
+@keyframes zoomIn {
+  0% {
+        transform: scale(0.0);
+        -webkit-transform: scale(0.0);
+    }
+  100% {
+      transform: scale(1.0);
+      -webkit-transform: scale(1.0);
+  }
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes greenPulse {
+  from { background-color: #749a02; -webkit-box-shadow: 0 0 9px #333; }
+  50% { background-color: #91bd09; -webkit-box-shadow: 0 0 18px #91bd09; }
+  to { background-color: #749a02; -webkit-box-shadow: 0 0 9px #333; }
+}
